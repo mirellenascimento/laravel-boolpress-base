@@ -7,9 +7,9 @@ use Faker\Generator as Faker;
 use Carbon\Carbon;
 
 
-$factory->define(Post::class, function (Faker $faker) {
+$factory->define(App\Post::class, function (Faker $faker) {
     return [
-        'category_id'=>$faker->numberBetween(1,20),
+        'category_id'=>$faker->numberBetween(1,10),
         'title'=>$faker->sentence(),
         'author'=>$faker->name(),
         'created_at'=>Carbon::now()->toDateTimeString(),

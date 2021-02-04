@@ -8,7 +8,7 @@ class Category extends Model
 {
     protected $table = 'categories';
 
-    public function connectPost(){
+    public function categoryToPost(){
         return $this->hasMany(Post::class);
     }
 }

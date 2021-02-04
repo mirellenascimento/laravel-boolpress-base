@@ -13,7 +13,9 @@
             <div class="card-header">Post ID: {{$post->id}}</div>
             <div class="card-body text-dark">
               <h5 class="card-title">Title: {{$post->title}}</h5>
-              <p class="card-text">Description: {{$post->info['description']}} 
+              <p class="card-text">Description: {{$post->postInformation->description}}</p>
+              <p class="card-text">Category: {{$post->category->title}}</p>
+
             </div>
           </div>
           @endforeach

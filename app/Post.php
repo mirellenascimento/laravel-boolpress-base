@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    public function connectPostInformation(){
+    public function postInformation(){
         return $this->hasOne(PostInformation::class);
     }
 
-    public function connectCategory(){
+    public function category(){
         return $this->belongsTo(Category::class);
     }
 

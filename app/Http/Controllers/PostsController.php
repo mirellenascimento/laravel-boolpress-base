@@ -16,11 +16,7 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Post::all();
-        $posts->each(function ($post){
-            $info = $post->connectPostInformation;
-            $category = $post->connectCategory;
-            // dd($post, $info, $category);
-            });
+      
         return view('posts', compact('posts'));
     }
 

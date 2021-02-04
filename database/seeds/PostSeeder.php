@@ -12,12 +12,11 @@ class PostSeeder extends Seeder
      *
      * @return void
      */
-    public function run(Faker $faker)
+    public function run()
     {
-        factory(App\Post::class, 100)
-        ->create()
-        ->each(function($Post){
-            $Post->save();
+
+        factory(App\Post::class, 100)->create()->each(function ($post) {
+            $post->postInformation()->save(factory(App\PostInformation::class)->make());
         });
     }
 }
