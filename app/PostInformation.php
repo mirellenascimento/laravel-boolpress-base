@@ -11,4 +11,6 @@ class PostInformation extends Model
     public function post(){
         return $this->belongsTo(Post::class);
     }
+
+    protected $fillable = ['description', 'slug', 'post_id'];
 }
